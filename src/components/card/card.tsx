@@ -6,18 +6,21 @@ type Props = {
 };
 
 export function Card({ skin }: Props) {
-  const rarityClass =
-    skin.rarity === 'Covert'
-      ? 'covert'
-      : skin.rarity === 'Mil-Spec Grade'
-      ? 'milspec'
-      : skin.rarity === 'Extraordinary'
-      ? 'extraordinary'
-      : skin.rarity === 'Restricted'
-      ? 'restricted'
-      : skin.rarity === 'Classified'
-      ? 'classified'
-      : 'cmun';
+  let rarityClass;
+
+  if (skin.rarity === 'Covert') {
+    rarityClass = 'covert';
+  } else if (skin.rarity === 'Mil-Spec Grade') {
+    rarityClass = 'milspec';
+  } else if (skin.rarity === 'Extraordinary') {
+    rarityClass = 'extraordinary';
+  } else if (skin.rarity === 'Restricted') {
+    rarityClass = 'restricted';
+  } else if (skin.rarity === 'Classified') {
+    rarityClass = 'classified';
+  } else {
+    rarityClass = 'milspec';
+  }
 
   return (
     <li className="skin-card">
