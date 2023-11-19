@@ -15,12 +15,27 @@ body {
   background-color: #272b30;
 }
 
-#app {
-  background: rgb(234, 255, 0);
-  background: linear-gradient(
-    0deg,
-    rgba(9, 9, 121, 1) 71% rgba(234, 255, 0) 29%
-  );
+header {
+  font-family: $font;
+  display: flex;
+  justify-content: center;
+  margin-inline: 1rem;
+  margin-block: 1rem;
+  gap: 2rem;
+  color: #fcac19;
+}
+
+.blue {
+  color: rgb(40, 57, 127);
+}
+
+footer {
+  font-family: $font;
+  font-size: 1.2rem;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  padding: 1rem;
 }
 
 ul {
@@ -67,6 +82,7 @@ li {
 }
 
 .covert {
+  font-family: $font;
   margin-inline: 1rem;
   color: #000;
   border-radius: 5px;
@@ -75,6 +91,7 @@ li {
 }
 
 .milspec {
+  font-family: $font;
   margin-inline: 1rem;
   color: #000;
   border-radius: 5px;
@@ -83,6 +100,7 @@ li {
 }
 
 .restricted {
+  font-family: $font;
   margin-inline: 1rem;
   color: #000;
   border-radius: 5px;
@@ -91,6 +109,7 @@ li {
 }
 
 .extraordinary {
+  font-family: $font;
   margin-inline: 1rem;
   color: #000;
   border-radius: 5px;
@@ -99,6 +118,7 @@ li {
 }
 
 .classified {
+  font-family: $font;
   margin-inline: 1rem;
   color: #000;
   border-radius: 5px;
@@ -111,4 +131,30 @@ li {
   max-width: 100%;
   min-height: 100vh;
   align-items: center;
+}
+
+.skin-name {
+  font-family: $font;
+}
+
+.info-container {
+  font-family: $font;
+}
+
+.collection-name {
+  font-family: $font;
+}
+
+.details-goback {
+  color: white;
+  font-family: $font;
+  font-size: 1.1rem;
+  font-weight: bold;
+  position: relative;
+  left: 40%;
+  bottom: 1rem;
+  padding: 1rem 2rem;
+  border: 1px solid white;
+  border-radius: 4px;
+  background-color: transparent;
 }

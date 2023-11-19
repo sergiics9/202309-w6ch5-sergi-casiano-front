@@ -5,17 +5,27 @@ import { loadSkinsThunk, updateSkinsThunk } from './skins.thunk';
 type SkinsState = {
   skins: Skin[];
   skinsState: 'idle' | 'loading' | 'error';
+  currentSkin: Skin | null;
 };
 
 const initialState: SkinsState = {
   skins: [],
   skinsState: 'idle',
+  currentSkin: null,
 };
 
 const skinsSlice = createSlice({
   name: 'skins',
   initialState,
-  reducers: {},
+  reducers: {
+    setCurrentSkin: (
+      state: SkinsState,
+      { payload }: PayloadAction<Skin | null>
+    ) => {
+      state.currentSkin = payload;
+      return state;
+    },
+  },
   extraReducers: (builder) => {
     builder.addCase(loadSkinsThunk.pending, (state: SkinsState) => {
       state.skinsState = 'loading';
@@ -45,3 +55,5 @@ const skinsSlice = createSlice({
 });
 
 export default skinsSlice.reducer;
+
+export const { setCurrentSkin } = skinsSlice.actions;

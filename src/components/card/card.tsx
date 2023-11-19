@@ -1,5 +1,7 @@
 import { Skin } from '../../models/skin';
 import '../../main.scss';
+import { useSkins } from '../../hooks/use.skins';
+import { Link } from 'react-router-dom';
 
 type Props = {
   skin: Skin;
@@ -22,6 +24,8 @@ export function Card({ skin }: Props) {
     rarityClass = 'milspec';
   }
 
+  const { handleDetailsPage } = useSkins();
+
   return (
     <li className="skin-card">
       <div className="card-container">
@@ -29,12 +33,15 @@ export function Card({ skin }: Props) {
         <p className={`skin-rarity ${rarityClass}`}>{skin.rarity}</p>
 
         <div className="image-container">
-          <img
-            src={skin.image}
-            alt={`imagen de ${skin.name}`}
-            width={400}
-            height={300}
-          />
+          <Link to={'/details/' + skin.id}>
+            <img
+              src={skin.image}
+              alt={`imagen de ${skin.name}`}
+              width={400}
+              height={300}
+              onClick={() => handleDetailsPage(skin)}
+            />
+          </Link>
         </div>
       </div>
     </li>
