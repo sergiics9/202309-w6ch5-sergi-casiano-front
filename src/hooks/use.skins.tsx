@@ -4,6 +4,7 @@ import { useDispatch } from 'react-redux';
 import { loadSkinsThunk, updateSkinsThunk } from '../slices/skins.thunk';
 import { AppDispatch } from '../store/store';
 import { Skin } from '../models/skin';
+import { setCurrentSkin } from '../slices/skins.slice';
 
 export function useSkins() {
   const dispatch = useDispatch<AppDispatch>();
@@ -26,8 +27,13 @@ export function useSkins() {
     }
   };
 
+  const handleDetailsPage = async (skin: Skin) => {
+    dispatch(setCurrentSkin(skin));
+  };
+
   return {
     loadSkins,
     updateSkin,
+    handleDetailsPage,
   };
 }
