@@ -1,8 +1,8 @@
 import { createAsyncThunk } from '@reduxjs/toolkit';
 import { ApiRepo } from '../services/api.repo';
-import { ApiResponse, Skin } from '../models/skin';
+import { Skin } from '../models/skin';
 
-export const loadSkinsThunk = createAsyncThunk<ApiResponse, ApiRepo>(
+export const loadSkinsThunk = createAsyncThunk<Skin[], ApiRepo>(
   'skins/load',
   async (repo) => {
     const skins = await repo.getSkins();
