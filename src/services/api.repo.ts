@@ -1,9 +1,9 @@
-import { Skin } from '../models/skin';
+import { ApiResponse, Skin } from '../models/skin';
 
 export class ApiRepo {
   apiUrl = 'http://localhost:2700/skins';
 
-  async getSkins(): Promise<Skin[]> {
+  async getSkins(): Promise<ApiResponse> {
     const response = await fetch(this.apiUrl);
     if (!response.ok)
       throw new Error(response.status + ' ' + response.statusText);

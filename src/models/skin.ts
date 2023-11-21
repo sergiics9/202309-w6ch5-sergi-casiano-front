@@ -1,5 +1,5 @@
 export interface Skin {
-  id: number;
+  id: string;
   name: string;
   rarity: string;
   description: string;
@@ -7,3 +7,7 @@ export interface Skin {
   collections_name: string;
   collections_image: string;
 }
+
+export type ApiResponse = {
+  skins: Skin[];
+};
