@@ -31,14 +31,11 @@ const skinsSlice = createSlice({
       state.skinsState = 'loading';
       return state;
     });
-    builder.addCase(
-      loadSkinsThunk.fulfilled,
-      (state: SkinsState, { payload }: PayloadAction<Skin[]>) => {
-        state.skins = payload;
-        state.skinsState = 'idle';
-        return state;
-      }
-    );
+    builder.addCase(loadSkinsThunk.fulfilled, (state, { payload }) => {
+      state.skins = payload.skins;
+      state.skinsState = 'idle';
+      return state;
+    });
     builder.addCase(loadSkinsThunk.rejected, (state: SkinsState) => {
       state.skinsState = 'error';
       return state;
