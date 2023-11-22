@@ -27,7 +27,7 @@ export function Card({ skin }: Props) {
   const { handleDetailsPage } = useSkins();
 
   return (
-    <li className="skin-card">
+    <li className="card">
       <div className="card-container">
         <p className="skin-name">{skin.name}</p>
         <p className={`skin-rarity ${rarityClass}`}>{skin.rarity}</p>

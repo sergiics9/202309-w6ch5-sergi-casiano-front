@@ -5,6 +5,7 @@ import { useSkins } from '../../hooks/use.skins';
 import { Card } from '../card/card';
 import { Header } from '../header/header';
 import { Footer } from '../footer/footer';
+import { Filter } from '../filter/filter';
 
 export function List() {
   const { skins } = useSelector((state: RootState) => state.skinsState);
@@ -17,6 +18,7 @@ export function List() {
   return (
     <>
       <Header></Header>
+      <Filter></Filter>
       <ul className="skins-list row list-unstyled">
         {skins.map((item) => (
           <Card key={item.name} skin={item}></Card>

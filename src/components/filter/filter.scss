@@ -1,0 +1,17 @@
+.filter-button {
+  font-size: 1.3rem;
+  font-family: 'Karla';
+  display: flex;
+  justify-content: flex-end;
+  margin-right: 2rem;
+  gap: 1rem;
+  color: #fcac19;
+}
+
+select {
+  font-family: 'Karla';
+  border: 1px solid #fcac19;
+  border-radius: 8px;
+  background-color: transparent;
+  padding: 0.4 rem;
+}
