@@ -10,9 +10,9 @@ export function Header() {
             height={80}
           />
         </div>
-        <h1>
-          CS2 <span className="blue">Skins</span>
-        </h1>
+        <div className="logo">
+          <h1>CS2 SKINS</h1>
+        </div>
       </header>
     </>
   );

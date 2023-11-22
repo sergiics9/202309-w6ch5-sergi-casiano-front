@@ -22,11 +22,21 @@ header {
   margin-inline: 1rem;
   margin-block: 1rem;
   gap: 2rem;
+  align-items: center;
   color: #fcac19;
+}
+
+.category {
+  font-family: $font;
+  color: lime;
 }
 
 .blue {
   color: rgb(40, 57, 127);
+}
+
+.orange {
+  color: #fcac19;
 }
 
 footer {
@@ -39,12 +49,6 @@ footer {
 }
 
 ul {
-  font-family: $font;
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 1rem;
-  margin: 0;
-  padding: 0;
   @media screen and (max-width: 768px) {
     img {
       height: 170px;
@@ -62,7 +66,7 @@ ul {
   }
 }
 
-li {
+.card {
   background-color: #1c1e22;
   list-style: none;
   text-align: center;
@@ -81,54 +85,68 @@ li {
   img:hover {
     transform: scale(1.05);
   }
+
+  .covert {
+    font-family: $font;
+    margin-inline: 1rem;
+    color: #000;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    background-color: #eb4b4bed;
+  }
+
+  .milspec {
+    font-family: $font;
+    margin-inline: 1rem;
+    color: #000;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    background-color: #4b69ff;
+  }
+
+  .restricted {
+    font-family: $font;
+    margin-inline: 1rem;
+    color: #000;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    background-color: #8847ff;
+  }
+
+  .extraordinary {
+    font-family: $font;
+    margin-inline: 1rem;
+    color: #000;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    background-color: gold;
+  }
+
+  .classified {
+    font-family: $font;
+    margin-inline: 1rem;
+    color: #000;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    background-color: #d32ee6;
+  }
 }
 
-.covert {
-  font-family: $font;
-  margin-inline: 1rem;
-  color: #000;
-  border-radius: 5px;
-  margin-bottom: 10px;
-  background-color: #eb4b4bed;
-}
-
-.milspec {
-  font-family: $font;
-  margin-inline: 1rem;
-  color: #000;
-  border-radius: 5px;
-  margin-bottom: 10px;
-  background-color: #4b69ff;
-}
-
-.restricted {
-  font-family: $font;
-  margin-inline: 1rem;
-  color: #000;
-  border-radius: 5px;
-  margin-bottom: 10px;
-  background-color: #8847ff;
-}
-
-.extraordinary {
-  font-family: $font;
-  margin-inline: 1rem;
-  color: #000;
-  border-radius: 5px;
-  margin-bottom: 10px;
-  background-color: gold;
-}
-
-.classified {
-  font-family: $font;
-  margin-inline: 1rem;
-  color: #000;
-  border-radius: 5px;
-  margin-bottom: 10px;
-  background-color: #d32ee6;
+.list-navbar {
+  display: flex;
+  li {
+    list-style: none;
+    padding: 0.5rem 1rem;
+  }
 }
 
 .skins-list {
+  font-family: $font;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+  margin: 0;
+  padding: 0;
   flex-wrap: nowrap;
   max-width: 100%;
   min-height: 100vh;
@@ -147,6 +165,10 @@ li {
   font-family: $font;
 }
 
+.case-name {
+  font-family: $font;
+}
+
 .details-goback {
   color: white;
   font-family: $font;
@@ -156,7 +178,22 @@ li {
   left: 40%;
   bottom: 1rem;
   padding: 1rem 2rem;
-  border: 1px solid white;
+  border: 1px solid #fcac19;
   border-radius: 4px;
   background-color: transparent;
+}
+
+h1 {
+  margin: 0;
+  font-size: 2.3rem;
+}
+
+h2 {
+  margin: 0;
+  color: rgb(40, 57, 127);
+  font-size: 1.5rem;
+}
+
+.logo {
+  display: block;
 }
