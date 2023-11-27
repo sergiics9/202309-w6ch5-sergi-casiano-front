@@ -35,7 +35,7 @@ export function Card({ skin }: Props) {
         <div className="image-container">
           <Link to={'/details/' + skin.id}>
             <img
-              src={skin.image}
+              src={`http://localhost:2700/uploads/${skin.image.publicId}`}
               alt={`imagen de ${skin.name}`}
               width={400}
               height={300}
