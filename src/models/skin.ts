@@ -1,10 +1,12 @@
+import { ImgData } from '../types/img.data';
+
 export interface Skin {
   id: string;
   name: string;
   rarity: string;
   category: 'Rifle' | 'SMG' | 'Pistol' | 'Knife' | 'Glove';
   description: string;
-  image: string;
+  image: ImgData;
   collections_name: string;
   collections_image: string;
   case_image: string;
