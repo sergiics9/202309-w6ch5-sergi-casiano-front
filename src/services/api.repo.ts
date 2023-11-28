@@ -1,7 +1,8 @@
+import { serverUrl } from '../config';
 import { Skin } from '../models/skin';
 
 export class ApiRepo {
-  apiUrl = 'http://localhost:2700/skins';
+  apiUrl = serverUrl + '/skins';
 
   async getSkins(): Promise<Skin[]> {
     const response = await fetch(this.apiUrl);
