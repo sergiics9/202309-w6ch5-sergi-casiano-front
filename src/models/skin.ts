@@ -13,6 +13,11 @@ export interface Skin {
   case_name: string;
 }
 
+/* export type User = {
+  email: string;
+  passwd: string;
+}; */
+
 export type ApiResponse = {
   skins: Skin[];
 };
