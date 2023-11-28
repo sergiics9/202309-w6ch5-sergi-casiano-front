@@ -2,7 +2,6 @@ import { Skin } from '../../models/skin';
 import '../../main.scss';
 import { useSkins } from '../../hooks/use.skins';
 import { Link } from 'react-router-dom';
-import { serverUrl } from '../../config';
 
 type Props = {
   skin: Skin;
@@ -36,7 +35,7 @@ export function Card({ skin }: Props) {
         <div className="image-container">
           <Link to={'/details/' + skin.id}>
             <img
-              src={`${serverUrl}/uploads/${skin.image.publicId}`}
+              src={`${skin.image.url}`}
               alt={`imagen de ${skin.name}`}
               width={400}
               height={300}

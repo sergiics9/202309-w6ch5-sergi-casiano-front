@@ -2,6 +2,18 @@ import { PayloadAction, createSlice } from '@reduxjs/toolkit';
 import { Skin } from '../models/skin';
 import { loadSkinsThunk, updateSkinsThunk } from './skins.thunk';
 
+/* type UserState = {
+  loggedUser: User | null;
+  token: string;
+  loggingState: 'idle' | 'logging' | 'error';
+};
+
+const initialStateUser: UserState = {
+  loggedUser: null,
+  token: '',
+  loggingState: 'idle',
+}; */
+
 type SkinsState = {
   skins: Skin[];
   skinsState: 'idle' | 'loading' | 'error';

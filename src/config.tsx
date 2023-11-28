@@ -5,4 +5,4 @@ export const serverUrl =
     ? 'http://localhost:2700'
     : 'https://backend-sergi-casiano.onrender.com/';
 
-https: console.log(serverUrl);
+console.log(serverUrl);

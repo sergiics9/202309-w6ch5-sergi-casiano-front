@@ -32,7 +32,7 @@ export function Details() {
         </div>
         <div className="image-container">
           <img
-            src={`http://localhost:2700/uploads/${currentSkin?.image.publicId}`}
+            src={`${currentSkin?.image.url}`}
             alt={currentSkin?.collections_name}
             height="300"
             width="400"
