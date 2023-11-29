@@ -1,6 +1,6 @@
 .filter-button {
   font-size: 1.3rem;
-  font-family: 'Karla';
+  font-family: 'Karla', sans-serif;
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
@@ -13,7 +13,7 @@
 }
 
 select {
-  font-family: 'Karla';
+  font-family: 'Karla', sans-serif;
   border: 1px solid #fcac19;
   border-radius: 8px;
   color: rgb(40, 57, 127);
