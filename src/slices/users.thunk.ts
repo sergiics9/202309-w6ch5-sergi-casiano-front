@@ -2,15 +2,19 @@ import { createAsyncThunk } from '@reduxjs/toolkit';
 import { LoginResponse } from '../types/login.response';
 import { LoginUser } from '../models/user';
 import { ApiRepoUsers } from '../services/api.repo.users';
+import { Storage } from '../services/storage';
 
 export const loginThunk = createAsyncThunk<
   LoginResponse,
   {
     loginUser: LoginUser;
     repo: ApiRepoUsers;
+    userStore: Storage<{ token: string }>;
   }
->('login', async ({ loginUser, repo }) => {
-  return await repo.login(loginUser);
+>('login', async ({ loginUser, repo, userStore }) => {
+  const loginResponse = await repo.login(loginUser);
+  userStore.set({ token: loginResponse.token });
+  return loginResponse;
 });
 
 export const loginTokenThunk = createAsyncThunk<
@@ -18,7 +22,10 @@ export const loginTokenThunk = createAsyncThunk<
   {
     token: string;
     repo: ApiRepoUsers;
+    userStore: Storage<{ token: string }>;
   }
->('loginWithToken', async ({ token, repo }) => {
-  return await repo.loginWithToken(token);
+>('loginWithToken', async ({ token, repo, userStore }) => {
+  const loginResponse = await repo.loginWithToken(token);
+  userStore.set({ token: loginResponse.token });
+  return loginResponse;
 });
