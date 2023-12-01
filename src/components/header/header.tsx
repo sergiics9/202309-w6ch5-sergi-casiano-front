@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom';
+import { UserButtons } from '../user.buttons/user.buttons';
 import './header.scss';
 
 export function Header() {
@@ -21,14 +21,7 @@ export function Header() {
               </h1>
             </div>
           </div>
-          <div className="log-in-register-container">
-            <Link to="/login">
-              <button className="register">Log in</button>
-            </Link>
-            <Link to="/register">
-              <button className="register">Register</button>
-            </Link>
-          </div>
+          <UserButtons></UserButtons>
         </div>
       </header>
     </>
